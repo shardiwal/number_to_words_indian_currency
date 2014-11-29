@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Number to words indian currency by shardiwal</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Number to words indian currency</h1>
+        <h2>Converts a given number into words format </h2>
+        <a href="https://github.com/shardiwal/number_to_words_indian_currency" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="indian-currency---number-to-words-converter" class="anchor" href="#indian-currency---number-to-words-converter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Indian currency - Number to Words converter</h1>
+
+<p>Its a small utility to convert currency number to words format</p>
+
+<h3>
+<a id="version" class="anchor" href="#version" aria-hidden="true"><span class="octicon octicon-link"></span></a>Version</h3>
+
+<p>1.0</p>
+
+<h3>
+<a id="methods" class="anchor" href="#methods" aria-hidden="true"><span class="octicon octicon-link"></span></a>Methods</h3>
+
+<ul>
+<li>toWords - print given amount in words</li>
+<li>toCurrency - print given amount in currency format</li>
+</ul>
+
+<h3>
+<a id="example" class="anchor" href="#example" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example</h3>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$converter</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">toIndianCurrency</span>();</span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// Twelve Rs. only</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>123<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// One Hundred and Twenty-Three Rs. only</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>1234<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// One Thousand Two Hundred and Thirty-Four Rs. only</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12345<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// Twelve Thousand Three Hundred and Fourty-Five Rs. only</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>123456<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// One Lakh Twenty-Three Thousand Four Hundred and Fifty-Six Rs. only</span></span>
+<span class="pl-s2"></span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12345600<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// One Crore Twenty-Three Lakh Fourty-Five Thousand Six Hundred Rs. only</span></span></pre></div>
+
+<h4>
+<a id="currency-symbol-can-be-changed-like-this" class="anchor" href="#currency-symbol-can-be-changed-like-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>Currency symbol can be changed like this</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$converter</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">toIndianCurrency</span>();</span>
+<span class="pl-s2"><span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span><span class="pl-vo">currency</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>₹<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// Twelve ₹ only</span></span></pre></div>
+
+<h4>
+<a id="postfix-text-can-be-changed-like-this" class="anchor" href="#postfix-text-can-be-changed-like-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postfix text can be changed like this</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$converter</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">toIndianCurrency</span>();</span>
+<span class="pl-s2"><span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span><span class="pl-vo">postfix</span> <span class="pl-k">=</span> <span class="pl-s1"><span class="pl-pds">'</span>payable<span class="pl-pds">'</span></span>;</span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// Twelve ₹ payable</span></span></pre></div>
+
+<h4>
+<a id="postfix-text-and-currency-can-be-disabled-like-this" class="anchor" href="#postfix-text-and-currency-can-be-disabled-like-this" aria-hidden="true"><span class="octicon octicon-link"></span></a>Postfix text and currency can be disabled like this</h4>
+
+<div class="highlight highlight-php"><pre><span class="pl-s2"><span class="pl-vo">$converter</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-s3">toIndianCurrency</span>();</span>
+<span class="pl-s2"><span class="pl-s3">echo</span> <span class="pl-vo">$converter</span><span class="pl-k">-&gt;</span>toWords(<span class="pl-s1"><span class="pl-pds">'</span>12<span class="pl-pds">'</span></span>,<span class="pl-s1"><span class="pl-pds">'</span>no_postfixtext<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s2"><span class="pl-c">// Twelve</span></span></pre></div>
+
+<h3>
+<a id="todos" class="anchor" href="#todos" aria-hidden="true"><span class="octicon octicon-link"></span></a>Todo's</h3>
+
+<ul>
+<li>Write Tests</li>
+<li>Add Internationalization </li>
+<li>Add Code Comments</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>MIT</p>
+
+<p><strong>Free Software, Yeah!</strong></p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/shardiwal/number_to_words_indian_currency/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/shardiwal/number_to_words_indian_currency/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/shardiwal/number_to_words_indian_currency"></a> is maintained by <a href="https://github.com/shardiwal">shardiwal</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
